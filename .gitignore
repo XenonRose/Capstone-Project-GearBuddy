@@ -1,0 +1,31 @@
+# Dependencies
+**/node_modules/
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Build and test output
+**/dist/
+**/dist-ssr/
+**/coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local editor settings
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+
+# Assignment files supplied separately
+/Capstone Project- AI-powered web application (1).pdf
+/files.zip
+
+# Old duplicate backend setup
+/backend/backend sub/
