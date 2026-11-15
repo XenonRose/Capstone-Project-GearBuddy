@@ -1,4 +1,4 @@
-# Dependencies
+﻿# Dependencies
 **/node_modules/
 
 # Local environment files and secrets
@@ -29,3 +29,12 @@ pnpm-debug.log*
 
 # Old duplicate backend setup
 /backend/backend sub/
+
+# Accidental nested copy of the root README
+/README/
+
+# Unused Vite starter files
+/frontend/README.md
+/frontend/public/
+/frontend/src/assets/react.svg
+/frontend/src/assets/vite.svg
