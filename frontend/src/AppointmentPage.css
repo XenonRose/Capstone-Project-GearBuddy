@@ -1,0 +1,230 @@
+.appointment-page {
+  position: relative;
+  display: flex;
+  min-height: 800px;
+  flex-direction: column;
+  overflow: hidden;
+  border-top: 6px solid var(--orange);
+  background:
+    radial-gradient(circle at 10% 35%, rgb(226 231 237 / 80%) 0 100px, transparent 101px),
+    radial-gradient(circle at 92% 78%, rgb(226 231 237 / 85%) 0 160px, transparent 161px),
+    var(--page-bg);
+  color: var(--navy);
+  font-family: var(--font);
+}
+
+.appointment-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 36px 32px 56px;
+}
+
+.appointment-heading {
+  text-align: center;
+}
+
+.appointment-eyebrow {
+  margin: 0 0 6px;
+  color: #53677b;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.appointment-heading h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.appointment-heading > p:last-child {
+  margin: 8px 0 0;
+  color: #4a5d70;
+  font-size: 16px;
+}
+
+.appointment-form,
+.appointment-confirmation {
+  padding: 28px;
+  border: 2px solid var(--navy);
+  border-top: 8px solid var(--orange);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(15 42 67 / 8%);
+}
+
+.appointment-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.appointment-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.appointment-field--full {
+  grid-column: 1 / -1;
+}
+
+.appointment-field input,
+.appointment-field select {
+  width: 100%;
+  min-height: 46px;
+  box-sizing: border-box;
+  padding: 0 12px;
+  border: 2px solid var(--navy);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--navy);
+  font: 600 15px var(--font);
+}
+
+.appointment-field input::placeholder {
+  color: #68798a;
+  font-weight: 500;
+}
+
+.appointment-field input:focus-visible,
+.appointment-field select:focus-visible {
+  outline: 3px solid rgb(232 101 15 / 35%);
+  outline-offset: 2px;
+}
+
+.appointment-form__note {
+  margin: 20px 0 0;
+  color: #4a5d70;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.appointment-submit {
+  min-height: 48px;
+  margin-top: 18px;
+}
+
+.appointment-confirmation {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.appointment-confirmation__icon {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8f2ea;
+  color: #244c2c;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.appointment-confirmation h2 {
+  margin: 16px 0 8px;
+  font-size: 26px;
+}
+
+.appointment-confirmation > p {
+  color: #4a5d70;
+  line-height: 1.5;
+}
+
+.appointment-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.appointment-summary > div {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--page-bg);
+}
+
+.appointment-summary dt {
+  color: #53677b;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.appointment-summary dd {
+  margin: 5px 0 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.appointment-confirmation .appointment-demo-note {
+  padding: 12px;
+  border-radius: 9px;
+  background: #fff3d6;
+  color: #624813;
+  font-size: 14px;
+}
+
+.appointment-confirmation__actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+@media (max-width: 760px) {
+  .appointment-page {
+    min-height: 720px;
+  }
+
+  .appointment-content {
+    gap: 18px;
+    padding: 24px 16px 36px;
+  }
+
+  .appointment-heading h1 {
+    font-size: 32px;
+  }
+
+  .appointment-form,
+  .appointment-confirmation {
+    padding: 20px 16px;
+  }
+
+  .appointment-form__grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .appointment-field--full {
+    grid-column: auto;
+  }
+
+  .appointment-submit {
+    width: 100%;
+  }
+
+  .appointment-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .appointment-confirmation__actions {
+    flex-direction: column;
+  }
+
+  .appointment-confirmation__actions .button {
+    width: 100%;
+  }
+}
